@@ -1,4 +1,3 @@
-# What-I-Learned
-
 # Index
-# Data Structure
+
+## Data Structure
