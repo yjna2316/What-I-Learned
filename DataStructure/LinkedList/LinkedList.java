@@ -19,10 +19,16 @@ public class LinkedList {
         }
     }
 
+    /**
+     * returns whether list is empty
+     */
     public boolean isEmpty() {
         return head == null;
     }
 
+    /**
+     * Add the node to the first of the list
+     */
     public void addFirst(Object data) {
         Node newNode = new Node(data);
         newNode.next = head;
@@ -33,6 +39,9 @@ public class LinkedList {
         }
     }
 
+    /**
+     * Add the node to the last of the list
+     */
     public void addLast(Object data) {
         Node newNode = new Node(data);
         if(isEmpty()) {
@@ -44,6 +53,9 @@ public class LinkedList {
         }
     }
 
+    /**
+     * Insert the node at the given index of the list
+     */
     public void add(int index, Object data) {
         isValidIndex(index);
 
@@ -119,6 +131,9 @@ public class LinkedList {
         return (n == null) ? -1 : index;
     }
 
+    /**
+     * returns the number of nodes in the list
+     */
     public int size() {
         return size;
     }
