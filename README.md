@@ -2,6 +2,9 @@
 
 ## Data Structure
 
+* LinkedList
 * Stack
 * Queue
+* Sort
+
 
