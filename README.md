@@ -3,5 +3,6 @@
 ## Data Structure
 
 * Stack
-** Stack
+*Stack
+*Queue
 
