@@ -3,5 +3,5 @@
 ## Data Structure
 
 * Stack
-**Stack
-* **Stack
+** Stack
+
