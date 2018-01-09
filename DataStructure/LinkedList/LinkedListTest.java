@@ -1,10 +1,8 @@
 package LinkedList;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 
-import java.util.NoSuchElementException;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -13,14 +11,8 @@ public class LinkedListTest {
     private LinkedList list;
 
     @Before
-    public void initList() {
+    public void init() {
         list = new LinkedList();
-    }
-
-    private void insert(int n) {
-        for (int i = 0; i < n; i ++) {
-            list.addLast(i);
-        }
     }
 
     @Test
@@ -59,11 +51,13 @@ public class LinkedListTest {
 
     @Test
     public void TestAddAtIndex() {
+        int sizeBefore, sizeAfter;
+
         insert(3);
 
-        int sizeBefore = list.size();
+        sizeBefore = list.size();
         list.add(0, -1);
-        int sizeAfter = list.size();
+        sizeAfter = list.size();
         assertEquals(sizeBefore + 1, sizeAfter);
         assertEquals(-1, list.get(0));
 
@@ -73,14 +67,17 @@ public class LinkedListTest {
 
     @Test
     public void TestRemoveAtIndex() {
-        insert(5);
+        int sizeBefore, sizeAfter;
 
-        int sizeBefore = list.size();
+        insert(5);
+        sizeBefore = list.size();
+
         Object dataAtIndexOne = list.get(1);
         list.remove(0);
-        int sizeAfter = list.size();
-        assertEquals(sizeBefore, sizeAfter + 1);
         assertEquals(dataAtIndexOne, list.get(0));
+
+        sizeAfter = list.size();
+        assertEquals(sizeBefore, sizeAfter + 1);
 
         Object dataAtIndexTwo = list.get(2);
         list.remove(1);
@@ -93,6 +90,12 @@ public class LinkedListTest {
         list.add(1,2);
         list.add(2,2);
         assertEquals(1, list.indexOf(2));
+    }
+
+    private void insert(int n) {
+        for (int i = 0; i < n; i ++) {
+            list.addLast(i);
+        }
     }
 
     @Test (expected = NoSuchElementException.class)
