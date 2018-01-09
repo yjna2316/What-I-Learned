@@ -33,7 +33,6 @@ public class LinkedStackTest {
     public void testPushThenPeek() {
         int data = 1;
         s.push(data);
-
         int size = s.size();
         assertEquals(data, s.peek());
         assertEquals(size, s.size());
