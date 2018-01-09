@@ -15,9 +15,15 @@ public class LinkedQueueTest {
     }
 
     @Test
-    public void testIsEmpty() {
+    public void testInitQueueIsEmpty() {
         assertTrue(q.isEmpty());
         assertEquals(0, q.size());
+    }
+
+    @Test
+    public void testEnqueueToEmptyQueue() {
+        q.enqueue(1);
+        assertFalse(q.isEmpty());
     }
 
     @Test
