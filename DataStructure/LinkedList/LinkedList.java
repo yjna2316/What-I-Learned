@@ -20,7 +20,7 @@ public class LinkedList {
     }
 
     /**
-     * returns whether list is empty
+     * returns whether the list is empty
      */
     public boolean isEmpty() {
         return head == null;
