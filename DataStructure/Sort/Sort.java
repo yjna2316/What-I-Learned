@@ -64,9 +64,33 @@ public class Sort {
         return a;
     }
 
-    public void quickSort(int[] a) {
-        int n = a.length;
-
-
+    /**
+     * Sorts an array using quickSort
+     */
+    public int[] quickSort(int[] a) {
+        return quickSort(a, 0, a.length - 1);
     }
+
+    public int[] quickSort (int[] a, int left, int right) {
+        int low = left;
+        int high = right;
+        int pivot = low;
+
+        if (left < right) {
+            while (low < high) {
+                while (low <= right && a[low] < a[pivot]) {
+                    low ++;
+                }
+                while (left <= high && a[high] > a[pivot]) {
+                    high --;
+                }
+                swap(a, low, high);
+            }
+            swap(a, pivot, high);
+            quickSort(a, left, high - 1);
+            quickSort(a, high + 1, right);
+        }
+        return a;
+    }
+
 }

@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 
 public class SortTest {
 
-    int[] unsorted = {5, 4, 3};
-    int[] sorted = {3, 4, 5};
+    int[] unsorted = {5, 4, 3, 2, 1};
+    int[] sorted = {1, 2, 3, 4, 5};
 
     Sort s = new Sort();
 
@@ -28,6 +28,6 @@ public class SortTest {
 
     @Test
     public void TestQuickSort() {
-        assertArrayEquals(sorted, s.quickSort(unsorted);
+        assertArrayEquals(sorted, s.quickSort(unsorted));
     }
 }
