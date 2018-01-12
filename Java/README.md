@@ -1,7 +1,6 @@
 # JAVA
-call by reference vs call by value
+pass by reference vs pass by value
 
 
-## call by refernce vs call by value
+## pass by refernce vs pass by value
 
-Suppose i hava an int array and try to modify the array passed as a method-parameter.
