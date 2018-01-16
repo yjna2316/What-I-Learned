@@ -1,5 +1,5 @@
 /*
- * Baekjoon #2293 µ¿Àü1
+ * Baekjoon #2293 ë™ì „1
  * https://www.acmicpc.net/problem/2293
  */
 import java.util.*;
