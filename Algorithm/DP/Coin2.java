@@ -1,5 +1,5 @@
 /*
- * Baekjoon #2294 µ¿Àü2
+ * Baekjoon #2294 ë™ì „2
  * https://www.acmicpc.net/problem/2294
  */
 import java.util.*;
@@ -13,10 +13,10 @@ public class Coin2 {
         for (int i = 0; i < sortOfCoins; i++) {
             coins[i] = sc.nextInt();
         }
-        System.out.println(getHowManyWays(coins, amount));
+        System.out.println(getWaysMinimum(coins, amount));
     }
 
-    public static int getHowManyWays(int[] coins, int totalAmount) {
+    public static int getWaysMinimum(int[] coins, int totalAmount) {
         int[] ways = new int[totalAmount + 1];
         for (int i = 1; i <= totalAmount; ++i) {
             ways[i] = totalAmount + 1;
