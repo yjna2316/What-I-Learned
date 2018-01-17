@@ -41,9 +41,6 @@ public class PriorityQueue {
         if(heapSize > 1) {  //  남은 노드가 2개이상 남았을 때, 노드간 위치 조정 필요 (heapify)
             siftDown(1);
         }
-        for (int val : a) {
-            System.out.print(val+ " ");
-        }
         return item;
     }
 

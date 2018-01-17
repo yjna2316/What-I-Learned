@@ -17,6 +17,7 @@ public class PriorityQueueTest {
     public void init() {
         priorityQueue = new PriorityQueue();
     }
+
     public int randomInput(int n, int max) {
         for (int i = 0; i < n; ++i) {
             int random = (int)(Math.random() * 100 + 1);
@@ -25,6 +26,7 @@ public class PriorityQueueTest {
             System.out.print((i+1) + "th: " + random + " heapSize: " + priorityQueue.heapSize + " ");
             System.out.println("max: " + max);
         }
+        System.out.println();
         return max;
     }
 
@@ -34,8 +36,9 @@ public class PriorityQueueTest {
         }
         System.out.println();
     }
+
     @Test
-    public void TestInitEmpty() {
+    public void testInitEmpty() {
         assertTrue(priorityQueue.isEmpty());
         assertEquals(0, priorityQueue.heapSize);
     }
@@ -57,6 +60,7 @@ public class PriorityQueueTest {
     public void testRemoveMaxHeap() throws Exception {
         int max =  randomInput(4, 0);
         for (int i = 0; i < 4; ++i) {
+            printHeap();
             int top = priorityQueue.peek();
             int pop = priorityQueue.removeMaxHeap();
             int heapSize = priorityQueue.heapSize;
@@ -76,5 +80,4 @@ public class PriorityQueueTest {
         assertEquals(true, priorityQueue.isEmpty());
         priorityQueue.removeMaxHeap();
     }
-
 }
