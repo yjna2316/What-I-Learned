@@ -1,15 +1,15 @@
 package Hash;
 
 /*
- * Open Address ¹æ½Ä
- * Hash TableÀ» 1Â÷¿ø ¹è¿­·Î ±¸ÇöÇØ Ãæµ¹ ¹ß»ı½Ã, ¼øÂ÷ÀûÀ¸·Î Å½»ö(Linear Probing)ÇØ ÀúÀåÇÒ À§Ä¡ Å½»ö
+ * Open Address ë°©ì‹
+ * Hash Tableì„ 1ì°¨ì› ë°°ì—´ë¡œ êµ¬í˜„í•´ ì¶©ëŒ ë°œìƒì‹œ, ìˆœì°¨ì ìœ¼ë¡œ íƒìƒ‰(Linear Probing)í•´ ì €ì¥í•  ìœ„ì¹˜ íƒìƒ‰
  */
 public class LinearHashTable  {
     private final static int TABLE_SIZE = 128;
 
     HashEntry[] table;
 
-    /* ÇØ½Ã Å×ÀÌºíÀÇ °¢ ¹öÄÏ µéÀ» °ø¹é »óÅÂ·Î ¸¸µç´Ù. */
+    /* í•´ì‹œ í…Œì´ë¸”ì˜ ê° bucketë“¤ì„ ê³µë°± ìƒíƒœë¡œ . */
     LinearHashTable() {
         table = new HashEntry[TABLE_SIZE];
         for (int i = 0; i < TABLE_SIZE; ++i) {
