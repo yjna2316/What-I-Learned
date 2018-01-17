@@ -2,7 +2,7 @@
 * [Priority Queue](#priority-queue)
 * [Heap](#binary-heap)
   * [Heap Sort](#heap-sort)
-* [HashTable](&hash-table)
+* [HashTable](#hash-table)
   * [Collision]
 
 * [References](#reference)
@@ -33,7 +33,7 @@ cf. Binary Search Tree는 중복을 허용하지 않으나, Heap에서는 중복
 N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 **전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때** 유용하다.
 
 ## Hash Table
-![Image of hashTable](https://en.wikipedia.org/wiki/Hash_table)
+![Image of hashTable](https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiO66ytst7YAhUK5bwKHYsrCI4QjRwIBw&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHash_table&psig=AOvVaw1JavykuLbZCdLaXPw-SMzh&ust=1516257720370765)
 
 
 
