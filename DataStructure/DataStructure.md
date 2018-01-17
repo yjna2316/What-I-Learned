@@ -2,6 +2,8 @@
 * [Priority Queue](#priority-queue)
 * [Heap](#binary-heap)
   * [Heap Sort](#heap-sort)
+* [HashTable](&hash-table)
+  * [Collision]
 
 * [References](#reference)
 
@@ -21,18 +23,20 @@ Heap\
 
 
 ## Heap
-**가장 크거나 가장 작은 값을 빠르게 찾아내도로 만들어진** 자료구조로, 부모 노드의 키 값이 자식 노드의 키 값보다 항상 큰(작은) 이진 트리를 말한다. Heap은 완전 이진 트리이기 때문에 배열로 구현 가능하며, 0이 아닌 1번 index부터 루트노드가 시작된다. 이는 노드의 고유번호 값과 배열의 index를 일치시켜 계산상 혼동을 줄이기 위함이다 Heap에는 최대힙(max heap), 최소힙(min heap) 두 종류가 있다.
+**가장 크거나 가장 작은 값을 빠르게 찾아내도록 만들어진** 자료구조로, 부모 노드의 키 값이 자식 노드의 키 값보다 항상 큰(작은) 이진 트리를 말한다. Heap은 *완전 이진 트리*이기 때문에 *배열*로 구현 가능하며, 0이 아닌 1번 index부터 루트노드가 시작된다. 이는 노드의 고유번호 값과 배열의 index를 일치시켜 계산상 혼동을 줄이기 위함이다 Heap에는 최대힙(max heap), 최소힙(min heap) 두 종류가 있다.
 
-MaxHeap에서 최대값을 찾는데 걸리는 Time Complexity는 O(1)이다. 새 노드를 삽입하거나 삭제하는데 걸리는 시간은 O(logN)이다. 이는 Heap 성질을 계속 유지시키기 위해 최악의 경우 트리 높이 만큼 비교 연산을 해야하기 때문이다(heapify).
-
-*heapify* ?
-
+MaxHeap에서 최대값을 찾는데 걸리는 Time Complexity는 O(1)이다. 새 노드를 삽입하거나 삭제하는데 걸리는 시간은 O(logN)이다. 이는 Heap 성질을 만족하도록 각 노드들의 위치를 조정해야 하는데, 최악의 경우 트리 높이 만큼 비교 연산을 해야하기 때문이다(heapify).
 
 cf. Binary Search Tree는 중복을 허용하지 않으나, Heap에서는 중복을 허용한다.
 
 ### Heap Sort
-======
-N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때 유용하다.
+N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 **전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때** 유용하다.
+
+## Hash Table
+![Image of hashTable](https://en.wikipedia.org/wiki/Hash_table)
+
+
+
 
 ## References 
 https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/DataStructure 
