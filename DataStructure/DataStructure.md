@@ -33,18 +33,20 @@ cf. Binary Search Tree는 중복을 허용하지 않으나, Heap에서는 중복
 N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 **전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때** 유용하다.
 
 ## Hash Table
-<<<<<<< HEAD
 해시 테이블 또는 해시 맵은 key와 value를 하나의 쌍으로 갖는 자료구조이다. 주요 동작은 key값으로 원하는 value값을 찾는 것인데 key값을 인덱스로 사용하는 것이 아니라, hash function을 이용해 주어진 key값을 hash값으로 변환하고, 이 **hash값을 인덱스**로 하여 원하는 값이 있는 버킷을 찾아낸다. 현실적으로 탐색 키들이 문자열이거나 매우 큰 숫자이기 때문이다. 따라서, 각 *탐색 키를 작은 정수로 맵핑* 시켜야하며, 이 역할은 hash function이 해준다. 해시 테이블은 배열로 구현한다.
 
 *Hashing* 해시테이블을 이용한 탐색. 탐색 키만 가지고 항목이 저장되어 있는 배열의 *인덱스를 결정*하는 기법이다. 
+
 
 ### 시간 복잡도와 용도
 key에 대한 데이터를 찾을 때, hash function을 한번만 수행하면 array내에 저장된 index 위치를 바로 찾아낼 수 있기 때문에, 데이터 저장과 삭제, 검색 속도가 빠르다. 특정 값을 탐색할 때, 인덱스로 접근하므로 평균적으로 시간 복잡도는 O(1). 충돌 때문에 최악의 경우 검색 시간은 O(N).
 
 hash table 검색 성능은 해시 함수의 성능과 테이블 크기에 좌우된다. 충돌이 발생하면 할수록 성능은 점점 O(n)에 가까워지므로 충돌을 최대한 억제시키는 것이 해쉬의 핵심 포인트다.
 
+
 ### Hash Function
 좋은 해시 함수란, 데이터를 되도록이면 고르게 분포하여, 충돌을 최소화 할 수 있는 함수이다. 해시테이블의 get(key)와 put(key)에 Cache 로직을 추가하게 되면, 자주 hit하는 데이터에 대해서 바로 데이터를 찾게 함으로써, 성능을 향상 시킬 수 있다. 
+
 
 ### Resolve Collision
 서로 다른 키가 동일한 위치(인덱스)로 해싱되었을 때 충돌이 발생한다. 따라서 해싱된 인덱스에 이미 다른 값이 들어 있다면, 저장할 수 있는 다른 위치를 찾아야 한다.
@@ -59,6 +61,7 @@ hash table 검색 성능은 해시 함수의 성능과 테이블 크기에 좌�
 * Tree를 사용하는 방식\
   각 버킷들을 Linked List 대신 Tree(Red-Black)를 사용하는 방식이다. Tree를 이용해 저장함으로써, select(검색) 성능을 높일 수 있다. 검색: O(logn) 하지만, 트리는 기본적으로 메모리 사용량이 많고, 데이터 개수가 적을 때 트리와 리스트 성능 상 차이가 거의 없으므로, 메모리 측면에서 보았을 때 데이터 갯수가 적으면 링크드 리스트를 사용한다. JDK 1.8 기준으로 index에 노드가 8개 이하일 경우 Linked List 사용.
 
+
 #### 2. Open Address 방식
 Index에 대한 충돌 처리에 대해서 Linked List와 같은 추가 메모리를 사용하지 않고, hash table array의 빈공간을 사용하는 방법으로, Seperate Chaining 방식에 비해서 메모리를 덜 사용한다.
 
@@ -69,11 +72,6 @@ Index에 대한 충돌 처리에 대해서 Linked List와 같은 추가 메모�
 * Double Hashing Prbing: 하나의 해시 함수에 의해 충돌이 발생하면 2차 해시 함수를 이용해 새로운 주소를 할당 받는 방법이다. 가장 많은 연산량을 요구한다.
 
 탐사 방식에 따라 해시 성능이 달라지지만, 가장 영향을 미치는 요소는 해시 테이블의 load factor(전체 슬롯 중에서 사용중인 슬롯 비율)이다. load factor가 증가할 수록 데이터를 찾거나 삽입하기 위해 필요한 탐사 횟수는 비약적으로(dramatically) 증가한다. 
-
-![Image of hashTable](https://en.wikipedia.org/wiki/Hash_table)
-=======
-![Image of hashTable](https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiO66ytst7YAhUK5bwKHYsrCI4QjRwIBw&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHash_table&psig=AOvVaw1JavykuLbZCdLaXPw-SMzh&ust=1516257720370765)
->>>>>>> 65558f683f7e301e4d72428490f13036aa8095bd
 
 
 ### References 
