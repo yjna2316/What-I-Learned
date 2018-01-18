@@ -18,25 +18,6 @@ public class PriorityQueueTest {
         priorityQueue = new PriorityQueue();
     }
 
-    public int randomInput(int n, int max) {
-        for (int i = 0; i < n; ++i) {
-            int random = (int)(Math.random() * 100 + 1);
-            priorityQueue.addMaxHeap(random);
-            max = (random > max) ? random : max;
-            System.out.print((i+1) + "th: " + random + " heapSize: " + priorityQueue.heapSize + " ");
-            System.out.println("max: " + max);
-        }
-        System.out.println();
-        return max;
-    }
-
-    public void printHeap() {
-        for (int key : priorityQueue.a) {
-            System.out.print(key+ " ");
-        }
-        System.out.println();
-    }
-
     @Test
     public void testInitEmpty() {
         assertTrue(priorityQueue.isEmpty());
@@ -50,7 +31,12 @@ public class PriorityQueueTest {
             max = randomInput(10, max);
             int top = priorityQueue.peek();
             printHeap();
-            System.out.println("max: " + max + " top: " + top + "heapSize: " + priorityQueue.heapSize);
+            String log = String.format(
+                "max: %d top: %d heapSize: %d",
+                max,
+                top,
+                priorityQueue.heapSize);
+            System.out.println(log);
             assertEquals(max, top);
             System.out.println();
         }
@@ -64,7 +50,12 @@ public class PriorityQueueTest {
             int top = priorityQueue.peek();
             int pop = priorityQueue.removeMaxHeap();
             int heapSize = priorityQueue.heapSize;
-            System.out.println(i+1 + "th pop: " + pop + " heapSize: " + heapSize);
+            String log = String.format(
+                "%d th pop: %d heapsize: %d",
+                i + 1, 
+                pop, 
+                heapSize);
+            System.out.println(log);
             assertEquals(top, pop);
         }
     }
@@ -80,4 +71,29 @@ public class PriorityQueueTest {
         assertEquals(true, priorityQueue.isEmpty());
         priorityQueue.removeMaxHeap();
     }
+
+    public int randomInput(int n, int max) {
+        for (int i = 0; i < n; ++i) {
+            int random = (int)(Math.random() * 100 + 1);
+            priorityQueue.addMaxHeap(random);
+            max = (random > max) ? random : max;
+            String log = String.format(
+                "%d th: %d heapsize: %d max: %d",
+                i + 1, 
+                random, 
+                priorityQueue.heapSize, 
+                max);
+            System.out.println(log);
+        }
+        System.out.println();
+        return max;
+    }
+
+    public void printHeap() {
+        for (int key : priorityQueue.a) {
+            System.out.print(key+ " ");
+        }
+        System.out.println();
+    }
+
 }

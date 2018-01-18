@@ -3,76 +3,76 @@ package priorityQueue;
 import java.util.*;
 
 /*
- * Assumption: MaxHeap í° ê°’ì´ ì•žì— ìžˆê³ , ìž‘ì€ ê°’ì€ ë’¤ì— ìžˆë„ë¡ í•œë‹¤.
+ * Assumption: MaxHeap Å« °ªÀÌ ¾Õ¿¡ ÀÖ°í, ÀÛÀº °ªÀº µÚ¿¡ ÀÖµµ·Ï ÇÑ´Ù.
  */
 public class PriorityQueue {
 
     int heapSize = 0;
-    int[] a = new int[101];
+    int[] arr = new int[101];
 
     /**
-     * MaxHeap ì‚½ìž… ì—°ì‚°ì€, ìƒˆë¡œìš´ ë…¸ë“œë¥¼ íž™ì˜ ë§ˆì§€ë§‰ ë…¸ë“œ ë‹¤ìŒì— ì‚½ìž…í•œë‹¤.
-     * íž™ ì„±ì§ˆì„ ë§Œì¡±ì‹œí‚¤ê¸° ìœ„í•´, ë¶€ëª¨ ë…¸ë“œì™€ ë¹„êµí•˜ë©° ê±°ìŠ¬ëŸ¬ ì˜¬ë¼ê°„ë‹¤.
-     * íž™ì„±ì§ˆì„ ë§Œì¡±í•˜ê±°ë‚˜, ë£¨íŠ¸ì— ë„ë‹¬í•  ë•Œê¹Œì§€.
+     * MaxHeap »ðÀÔ ¿¬»êÀº, »õ·Î¿î ³ëµå¸¦ ÈüÀÇ ¸¶Áö¸· ³ëµå ´ÙÀ½¿¡ »ðÀÔÇÑ´Ù.
+     * Èü ¼ºÁúÀ» ¸¸Á·½ÃÅ°±â À§ÇØ, ºÎ¸ð ³ëµå¿Í ºñ±³ÇÏ¸ç °Å½½·¯ ¿Ã¶ó°£´Ù.
+     * Èü¼ºÁúÀ» ¸¸Á·ÇÏ°Å³ª, ·çÆ®¿¡ µµ´ÞÇÒ ¶§±îÁö.
      */
     public void addMaxHeap(int key) {
         heapSize = heapSize + 1;
-        int newIdx = heapSize;
-        while (newIdx > 1 && key > a[newIdx / 2]) {
-            a[newIdx] = a[newIdx / 2];
-            newIdx = newIdx / 2;
+        int newIndex = heapSize;
+        while (newIndex > 1 && key > arr[newIndex / 2]) {
+            arr[newIndex] = arr[newIndex / 2];
+            newIndex = newIndex / 2;
         }
-        a[newIdx] = key;
+        arr[newIndex] = key;
     }
 
     /**
-     * ì‚­ì œ ì—°ì‚°ì€, ë¨¼ì € ë£¨íŠ¸ ë…¸ë“œ ìžë¦¬ì— íž™ì˜ ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°€ì ¸ì˜¨ë‹¤.
-     * Heapifyë¥¼ ê±°ì¹œí›„, ë£¨íŠ¸ ë…¸ë“œë¥¼ ë°˜í™˜í•œë‹¤.
+     * »èÁ¦ ¿¬»êÀº, ¸ÕÀú ·çÆ® ³ëµå ÀÚ¸®¿¡ ÈüÀÇ ¸¶Áö¸· ³ëµå¸¦ °¡Á®¿Â´Ù.
+     * Heapify¸¦ °ÅÄ£ÈÄ, ·çÆ® ³ëµå¸¦ ¹ÝÈ¯ÇÑ´Ù.
      */
     public int removeMaxHeap() {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
         int item = peek();
-        a[1] = a[heapSize];  // ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ë£¨íŠ¸ë…¸ë“œë¡œ ê°€ì ¸ì˜¨ í›„ì—,
-        heapSize = heapSize - 1;  // íž™ ì›ì†Œ ê°œìˆ˜ê°€ 1 ê°ì†Œí•œë‹¤.
+        arr[1] = arr[heapSize];  // ¸¶Áö¸· ³ëµå¸¦ ·çÆ®³ëµå·Î °¡Á®¿Â ÈÄ¿¡,
+        heapSize = heapSize - 1;  // Èü ¿ø¼Ò °³¼ö°¡ 1 °¨¼ÒÇÑ´Ù.
 
-        if(heapSize > 1) {  //  ë‚¨ì€ ë…¸ë“œê°€ 2ê°œì´ìƒ ë‚¨ì•˜ì„ ë•Œ, ë…¸ë“œê°„ ìœ„ì¹˜ ì¡°ì • í•„ìš” (heapify)
+        if(heapSize > 1) {  //  ³²Àº ³ëµå°¡ 2°³ÀÌ»ó ³²¾ÒÀ» ¶§, ³ëµå°£ À§Ä¡ Á¶Á¤ ÇÊ¿ä (heapify)
             siftDown(1);
         }
         return item;
     }
 
     /*
-     * MaxHeapì—ì„œ ì‚­ì œ ì—°ì‚°ì‹œ, íž™ ì„±ì§ˆì„ ë§Œì¡±ì‹œí‚¤ê¸° ìœ„í•´
-     * ë…¸ë“œì˜ ìžì‹ë…¸ë“œ ì¤‘ ë” í° ê°’ê³¼ êµí™˜ì„ í•˜ë©° ë‚´ë ¤ê°„ë‹¤.
-     * íž™ ì„±ì§ˆì„ ë§Œì¡±í•˜ê±°ë‚˜ íž™ íŠ¸ë¦¬ë¥¼ ë²—ì–´ë‚  ë•Œê¹Œì§€.
+     * MaxHeap¿¡¼­ »èÁ¦ ¿¬»ê½Ã, Èü ¼ºÁúÀ» ¸¸Á·½ÃÅ°±â À§ÇØ
+     * ³ëµåÀÇ ÀÚ½Ä³ëµå Áß ´õ Å« °ª°ú ±³È¯À» ÇÏ¸ç ³»·Á°£´Ù.
+     * Èü ¼ºÁúÀ» ¸¸Á·ÇÏ°Å³ª Èü Æ®¸®¸¦ ¹þ¾î³¯ ¶§±îÁö.
      */
     public void siftDown(int index) {
-        int key = a[index];
+        int key = arr[index];
         int childIndex;
 
         while (heapSize >= index * 2) {
-            if (heapSize == index * 2) {  // ë…¸ë“œì˜ ìžì‹ ë…¸ë“œê°€ ì™¼ìª½ ìžì‹ ë…¸ë“œë§Œ ìžˆì„ ë•Œ,
+            if (heapSize == index * 2) {  // ³ëµåÀÇ ÀÚ½Ä ³ëµå°¡ ¿ÞÂÊ ÀÚ½Ä ³ëµå¸¸ ÀÖÀ» ¶§,
                 childIndex = index * 2;
             } else {
-                childIndex = (a[index * 2] > a[index * 2 + 1]) ? index * 2 : index * 2 + 1;
+                childIndex = (arr[index * 2] > arr[index * 2 + 1]) ? index * 2 : index * 2 + 1;
             }
 
-            if (a[childIndex] < key) {
+            if (arr[childIndex] < key) {
                 break;
             }
-            a[index] = a[childIndex];
+            arr[index] = arr[childIndex];
             index = childIndex;
         }
-        a[index] = key;
+        arr[index] = key;
     }
 
     public int peek() {
         if (isEmpty()) {
         throw new NoSuchElementException();
     }
-        return a[1];
+        return arr[1];
     }
 
     public boolean isEmpty() {
