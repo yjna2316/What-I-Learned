@@ -8,7 +8,7 @@
 * [References](#reference)
 
 ## Priority Queue
-우선순위 개념을 큐에 도입한 자료구조로, **우선순위가 높은 데이터 순으로 삭제**된다. 배열, 연결리스트, 힙 등을 통해 구현할 수 있으며, 힙(heap)이 가장 효율적이다. 
+우선순위 개념을 큐에 도입한 자료구조로, **우선순위가 높은 데이터 순으로 삭제**된다. 배열, 연결리스트, 힙 등을 통해 구현할 수 있으며, 힙(heap)이 가장 효율적이다./ 
 [code](/DataStructure/PriorityQueueAndHeap/PriorityQueue.java)
 
 Array\
