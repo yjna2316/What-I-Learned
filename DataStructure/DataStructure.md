@@ -1,6 +1,6 @@
 # Part1-1 DataStructure
 * [Priority Queue](#priority-queue)
-* [Heap](#heap)
+  * [Heap](#heap)
   * [Heap Sort](#heap-sort)
 * [HashTable](#hash-table)
   * [Collision]
@@ -16,7 +16,7 @@ Array\
 Linked List\
 *Unsorted* 삽입할 경우, 첫번째 노드로 삽입한다 O(1). 삭제시, 링크필드를 따라서 모든 노드를 스캔해야 한다 O(N). 배열과 달리 다른 노드를 이동시킬 필요가 없다. *Sorted* 우선순위가 높은 요소가 앞에 위치하는 것이 유리하다. 삽입 시 첫번째 노드부터 순차적으로 비교해가면서 위치를 찾아야 하므로 O(N). 삭제는 첫 번째 노드를 삭제하면 되므로 O(1).
 
-Heap\\
+Heap\
 삽입시, 새로운 요소가 히프 트리를 타고 올라가면서 부모 노드들과 교환을 하게 되는데, 최악의 경우 루트 노드까지 올라가야 하므로 트리 높이만큼 시간이 걸린다. 히프는 완전 이진 트리이므로 히프의 높이는 logN이다 O(logN). 삭제도 마찬가지로 마지막 노드를 루트로 가져온 후, 자식 노드들과 비교하며 내려가고 최악의 경우 가장 아래 레벨까지 내려가야하므로 트리 높이만큼 시간이 걸린다 O(logN).
 
 | Representations      | Insert  | Delete  |
@@ -26,8 +26,6 @@ Heap\\
 | Sorted Array         | O(N)    | O(1)    |
 | Sorted Linked List   | O(N)    | O(1)    |
 | Heap                 | O(logN) | O(logN) |
-
-\
 \
 \
 \
@@ -38,12 +36,12 @@ MaxHeap에서는 부모가 자식보다 항상 크거나 같다. 따라서 Root 
 
 cf. Binary Search Tree는 중복을 허용하지 않으나, Heap에서는 중복을 허용한다.
 
-
+\
 ### Heap Sort
 N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 **전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때** 유용하다.
-
-
-
+\
+\
+\
 ## Hash Table
 해시 테이블 또는 해시 맵은 key와 value를 하나의 쌍으로 갖는 자료구조이다. 주요 동작은 key값으로 원하는 value값을 찾는 것인데 key값을 인덱스로 사용하는 것이 아니라, hash function을 이용해 주어진 key값을 hash값으로 변환하고, 이 **hash값을 인덱스**로 하여 원하는 값이 있는 버킷을 찾아낸다. 현실적으로 탐색 키들이 문자열이거나 매우 큰 숫자이기 때문이다. 따라서, 각 *탐색 키를 작은 정수로 맵핑* 시켜야하며, 이 역할은 hash function이 해준다. 해시 테이블은 배열로 구현한다.
 
