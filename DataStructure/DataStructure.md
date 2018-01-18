@@ -10,7 +10,7 @@
 ## Priority Queue
 우선순위 개념을 큐에 도입한 자료구조로, **우선순위가 높은 데이터 순으로 삭제**된다. 배열, 연결리스트, 힙 등을 통해 구현할 수 있으며, 힙(heap)이 가장 효율적이다.
 
-####[code](/DataStructure/PriorityQueueAndHeap/PriorityQueue.java)
+#### [code](/DataStructure/PriorityQueueAndHeap/PriorityQueue.java)
 
 Array\
 *Unsorted* 삽입할 경우, 맨 끝에 붙인다 O(1). 삭제할 경우, 가장 우선순위가 높은 원소를 찾아서 삭제해야 하므로 원소들을 처음부터 끝까지 스캔 O(N). 삭제 후 뒤에 있는 요소들을 앞으로 이동시켜야 한다. *Sorted* 삽입할 경우, 일일이 다른 원소와 비교하여 우선순위에 따라 삽입할 위치를 결정해야 한다. 삽입 위치를 찾은 다음, 뒤에 있는 요소들을 뒤로 이동시켜야 한다 O(N). 삭제는 큰 수의 우선순위가 높다고 가정할 경우 맨 뒤에 위치한 요소를 삭제한다 O(1).
