@@ -1,7 +1,7 @@
 # Part1-1 DataStructure
 * [Priority Queue](#priority-queue)
 * [Heap](#binary-heap)
-  * [Heap Sort](#heap-sort)
+  * [Heap Sort](#heap)
 * [HashTable](#hash-table)
   * [Collision]
 
@@ -35,8 +35,11 @@ MaxHeap에서는 부모가 자식보다 항상 크거나 같다. 따라서 Root 
 
 cf. Binary Search Tree는 중복을 허용하지 않으나, Heap에서는 중복을 허용한다.
 
+
 ### Heap Sort
 N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 **전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때** 유용하다.
+
+
 
 ## Hash Table
 해시 테이블 또는 해시 맵은 key와 value를 하나의 쌍으로 갖는 자료구조이다. 주요 동작은 key값으로 원하는 value값을 찾는 것인데 key값을 인덱스로 사용하는 것이 아니라, hash function을 이용해 주어진 key값을 hash값으로 변환하고, 이 **hash값을 인덱스**로 하여 원하는 값이 있는 버킷을 찾아낸다. 현실적으로 탐색 키들이 문자열이거나 매우 큰 숫자이기 때문이다. 따라서, 각 *탐색 키를 작은 정수로 맵핑* 시켜야하며, 이 역할은 hash function이 해준다. 해시 테이블은 배열로 구현한다.
