@@ -5,6 +5,11 @@
 * LinkedList
 * Stack
 * Queue
-* Sort
+* Sort  
+* PriorityQueue
+* Hashing
+* Tree
+* Graph
+
 
 
