@@ -2,7 +2,7 @@ package priorityQueue;
 
 import java.util.*;
 
-/*
+/**
  * Assumption: MaxHeap 큰 값이 앞에 있고, 작은 값은 뒤에 있도록 한다.
  */
 public class PriorityQueue {
@@ -43,7 +43,7 @@ public class PriorityQueue {
         return item;
     }
 
-    /*
+    /**
      * MaxHeap에서 삭제 연산시, 힙 성질을 만족시키기 위해
      * 노드의 자식노드 중 더 큰 값과 교환을 하며 내려간다.
      * 힙 성질을 만족하거나 힙 트리를 벗어날 때까지.
