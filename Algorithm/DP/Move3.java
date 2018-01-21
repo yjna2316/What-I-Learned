@@ -26,7 +26,6 @@ public class Move3 {
   }
 
   private static int getMaxCandies(int row, int col) {
-
     if (row < 1 || col < 1) {
       return 0;
     }
