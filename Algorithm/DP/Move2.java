@@ -27,7 +27,6 @@ public class Move2 {
      *
      */
     int[][] d = new int[row + 1][col + 1];
-
     d[0][0] = matrix[1][1];
     for (int i = 1; i <= row; ++i) {
       for (int j = 1; j <= col; ++j) {

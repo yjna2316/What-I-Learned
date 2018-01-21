@@ -37,6 +37,6 @@ public class Move {
         d[i][j] += matrix[i][j];
       }
     }
-    System.out.println(d[row - 1][col - 1]);
+    System.out.println(d[row][col]);
   }
 }
