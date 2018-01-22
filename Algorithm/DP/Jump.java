@@ -24,6 +24,7 @@ public class Jump {
     
     for (int i = 1; i <= n; ++i) {   
       for (int j = 1; j<= n; ++j) {
+        
         data[i][j] = sc.nextInt();
         
         if (data[i][j] == 0) {
