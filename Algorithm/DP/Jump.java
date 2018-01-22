@@ -20,12 +20,10 @@ public class Jump {
         if (data[i][j] == 0) {
           continue;
         }
-
         // (i, j) -> (i, j + data[i][j])
         if (j + data[i][j] <= n) {
           paths[i][j + data[i][j]] += paths[i][j];
-        }
-
+        }        
         // (i, j) -> (i + data[i][j], j)
         if (i + data[i][j] <= n) {
           paths[i + data[i][j]][j] += paths[i][j];
