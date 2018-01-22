@@ -1,32 +1,40 @@
-package DP;
 /**
  * Baekjoon 1890 Jump
- * D[i][j] = (i,j)·Î °¥ ¼ö ÀÖ´Â °æ·Î ¼ö 
+ * D[i][j] = (i,j)ë¡œ ê°ˆ ìˆ˜ ìˆëŠ” ê²½ë¡œ ìˆ˜ 
  * (i, j) -> (i, j + A) := D[i][j + A] += D[i][j]
  * (i, j) -> (i + A, j) := D[i + A][j] += D[i][j]
  * Time: O(n^2) Space: O(n^2)
  */
+package DP;
 import java.util.*;
 public class Jump {
+  
   public static void main(String[] args) {
+    
     Scanner sc = new Scanner(System.in);
+    
     int n = sc.nextInt();
     int[][] data = new int[n + 1][n + 1];
     /*
-     * ÁÖÀÇ. °æ·ÎÀÇ °³¼ö 2^64 -1 ÀÌ¹Ç·Î int·Î ¼±¾ğ½Ã Ç¥Çö¹üÀ§¸¦ ³Ñ¾î°¡¹Ç·Î long »ç¿ë
+     * ì£¼ì˜. ê²½ë¡œì˜ ê°œìˆ˜ 2^64 -1 ì´ë¯€ë¡œ intë¡œ ì„ ì–¸ì‹œ í‘œí˜„ë²”ìœ„ë¥¼ ë„˜ì–´ê°€ë¯€ë¡œ long ì‚¬ìš©
      */
     long[][] paths = new long[n + 1][n + 1];
+    
     paths[1][1] = 1;
-    for (int i = 1; i <= n; ++i) {
+    
+    for (int i = 1; i <= n; ++i) {   
       for (int j = 1; j<= n; ++j) {
         data[i][j] = sc.nextInt();
+        
         if (data[i][j] == 0) {
           continue;
         }
+        
         // (i, j) -> (i, j + data[i][j])
         if (j + data[i][j] <= n) {
           paths[i][j + data[i][j]] += paths[i][j];
         }        
+        
         // (i, j) -> (i + data[i][j], j)
         if (i + data[i][j] <= n) {
           paths[i + data[i][j]][j] += paths[i][j];
