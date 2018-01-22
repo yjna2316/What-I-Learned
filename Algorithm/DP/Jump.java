@@ -1,7 +1,10 @@
 package DP;
 /**
  * Baekjoon 1890 Jump
- * D[i][j] = (i,j)로 갈 수 있는 경로 수
+ * D[i][j] = (i,j)로 갈 수 있는 경로 수 
+ * (i, j) -> (i, j + A) := D[i][j + A] += D[i][j]
+ * (i, j) -> (i + A, j) := D[i + A][j] += D[i][j]
+ * Time: O(n^2) Space: O(n^2)
  */
 import java.util.*;
 public class Jump {
