@@ -3,7 +3,6 @@ package HashTable;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.*;
-import java.util.*;
 
 public class HashTableOpenAddressTest {
   private HashTableOpenAddress openAddressTable;
