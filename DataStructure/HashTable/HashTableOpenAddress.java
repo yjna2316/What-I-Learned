@@ -29,7 +29,6 @@ class TableEntry //implements Entry
 }
 
 
-
 public class HashTableOpenAddress
 {
   public static final int TABLE_SIZE = 11;
@@ -39,6 +38,7 @@ public class HashTableOpenAddress
 
   public TableEntry[] table;
   public TableEntry deleted;
+
 
   /**
    * Initialize the hash table null.
@@ -53,15 +53,18 @@ public class HashTableOpenAddress
     deleted = new TableEntry(-1, -1);
   }
 
+
   public void setThreshold(float threshold) {
     this.threshold = threshold;
     maxSize = (int) (table.length * threshold);
   }
 
+
   public int hashFunction(int key)
   {
     return key % TABLE_SIZE;
   }
+
 
   /**
    * Find the entry with given key in the hashTable
@@ -88,6 +91,7 @@ public class HashTableOpenAddress
     }
     return null;
   }
+
 
   /**
    * Add a new entry with given input (key, value) into an empty bucket in the hash table.
@@ -128,6 +132,7 @@ public class HashTableOpenAddress
     }
   }
 
+
   /*
    * If the number of entries of the table get bigger than maxSize,
    * then create a new table double to the size and move contents to the new table from non-empty not deleted buckets.
@@ -145,6 +150,7 @@ public class HashTableOpenAddress
       }
     }
   }
+
 
   /*
    * Search given key entry and replace it with deleted entry.
@@ -166,6 +172,7 @@ public class HashTableOpenAddress
       index = index + 1;
     }
   }
+
 
   private boolean hasKey(int hash, int key)
   {
