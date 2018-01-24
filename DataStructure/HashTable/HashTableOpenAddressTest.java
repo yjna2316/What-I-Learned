@@ -28,7 +28,7 @@ public class HashTableOpenAddressTest {
   }
 
   @Test
-  public void putTest() throws Exception {
+  public void putTest() {
     openAddressTable.put(1, 1);  // put new entry
     for (TableEntry entry : openAddressTable.table) {
       if (entry != null) {
@@ -54,7 +54,7 @@ public class HashTableOpenAddressTest {
   // 질문2. 테이블 내용을 출력해서 test해도 되나.
 
   @Test
-  public void removeTest() throws Exception {
+  public void removeTest() {
     put(10);
     System.out.println("before remove");
     print();
