@@ -1,7 +1,5 @@
 package DP;
-
 import java.util.*;
-
 /*
  * Solution1: two pointers
  * Time: O(n*m) space: O(n*n)
@@ -14,6 +12,7 @@ public class Palindrom {
     for (int i = 1; i <= n; ++i) {
       numbers[i] = sc.nextInt();
     }
+
     int m = sc.nextInt();
     StringBuilder sb = new StringBuilder();
     for (int i = 1; i <= m; ++i) {
@@ -59,16 +58,17 @@ class Palindrom1 {
     System.out.println(sb.toString());
   }
 
-
   private static void isPalindrome(int n, int[] numbers, int[][] d) {
     for(int i = 1; i < n + 1; ++i) {
       d[i][i] = 1;
     }
+
     for(int i = 1; i < n; ++i) {
       if(numbers[i] == numbers[i + 1]) {
         d[i][i + 1] = 1;
       }
     }
+
     for (int k = 2; k < n; ++k) {
       for (int i = 1; i < n - k + 1; ++i) {
           int j = i + k;
@@ -112,6 +112,7 @@ class Palindrom2 {
   private static int isPalindrome(int starIndex, int endIndex) {
     if (d[starIndex][endIndex] >= 0)
       return d[starIndex][endIndex];
+
     if (starIndex == endIndex) {
       d[starIndex][endIndex] = 1;
     } else if (starIndex + 1 == endIndex) {
