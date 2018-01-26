@@ -44,6 +44,7 @@ class Palindrom1 {
     for (int i = 1; i <= n; ++i) {
       numbers[i] = sc.nextInt();
     }
+
     int[][] d = new int[n + 1][n + 1];
     isPalindrome(n, numbers, d);
 
@@ -89,9 +90,9 @@ class Palindrom2 {
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
-
     numbers = new int[n + 1];
     d = new int[n + 1][n + 1];
+
     for (int i = 1; i <= n; ++i) {
       numbers[i] = sc.nextInt();
       Arrays.fill(d[i], - 1);
@@ -111,7 +112,6 @@ class Palindrom2 {
   private static int isPalindrome(int starIndex, int endIndex) {
     if (d[starIndex][endIndex] >= 0)
       return d[starIndex][endIndex];
-
     if (starIndex == endIndex) {
       d[starIndex][endIndex] = 1;
     } else if (starIndex + 1 == endIndex) {
