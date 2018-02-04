@@ -5,7 +5,7 @@
  * d[i][j] += go(x,y) (x, y는 방향의 좌표)
  */
 package DP;
-import java.util.Scanner;
+import java.util.*;
 public class GoDown {
   public static int[] dx = {1, -1, 0, 0};
   public static int[] dy = {0, 0, 1, -1};
