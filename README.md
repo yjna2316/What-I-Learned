@@ -11,7 +11,7 @@
 * Tree
 * Graph
 
-## Part1-2 Computer Architecture
+## [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
 
 * 폰노이만 구조
 * CPU
