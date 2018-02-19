@@ -1,6 +1,7 @@
 package DP;
 import java.util.*;
 /*
+ * Baekjoon 10942 팰린드롬?
  * Solution1: two pointers
  * Time: O(n*m) space: O(n*n)
  */
@@ -59,16 +60,19 @@ class Palindrom1 {
   }
 
   private static void isPalindrome(int n, int[] numbers, int[][] d) {
+    /* 길이가 1일 때 */
     for(int i = 1; i < n + 1; ++i) {
       d[i][i] = 1;
     }
 
+    /* 길이가 2일 때 */
     for(int i = 1; i < n; ++i) {
       if(numbers[i] == numbers[i + 1]) {
         d[i][i + 1] = 1;
       }
     }
 
+    /* 길이가 3이상 */
     for (int k = 2; k < n; ++k) {
       for (int i = 1; i < n - k + 1; ++i) {
           int j = i + k;
