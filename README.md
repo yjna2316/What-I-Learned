@@ -2,14 +2,21 @@
 
 ## [Part1-1 Data Structure](https://github.com/yjna2316/What-I-Learned/blob/master/DataStructure/DataStructure.md)
 
-* LinkedList
-* Stack
-* Queue
-* Sort  
-* PriorityQueue
-* Hashing
+* Array vs ArryaList vs LinkedList
+* Stack and Queue
+* Sort
+* Priority Queue
+  * Heap
+  * Heap Sort
 * Tree
-* Graph
+  * Binary Search Tree
+  * AVL Tree
+  * Red Black Tree
+* HashTable
+  * Hash Function
+  * Collision Resolution
+  * Resizing
+* References
 
 ##  [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
 
