@@ -1,22 +1,25 @@
 # Part1-1 DataStructure
-* [Array vs ArryaList vs LinkedList](#array vs arryaList vs linkedList)
+* [Array vs ArryaList vs LinkedList](#Array-vs-ArryaList-vs-LinkedList)
 * [Stack and Queue](#stack-and-queue)
 * [Sort](#sort)
 * [Priority Queue](#priority-queue)
-  * [Heap](#heap)
-  * [Heap Sort](#heap-sort)
+  * Heap
+  * Heap Sort
 * [Tree](#tree)
   * Binary Search Tree
   * AVL Tree
   * Red Black Tree
 * [HashTable](#hash-table)
-  * [Hash Function](#hash-function)
-  * [Collision Resolution](#collision-resolution)
-  * [Resizing](#resizing)
+  * Hash Function
+  * Collision Resolution
+  * Resizing
 * [References](#reference)
 
-## Array vs Arrya
+--------------------------------------------------------------
+## Array vs ArryaList vs LinkedList
 ### Array
+동일한 자료형으로 선언된 원소들을 메모리 상에 연속적으로 저장하는 자료구조로 기본/참조 데이터형 모두 배열로 저장 가능. 배열의 메모리 영역은 Heap
+http://blog.naver.com/PostView.nhn?blogId=r00t_ict10&logNo=220231424593&parentCategoryNo=&categoryNo=10&viewDate=&isShowPopularPosts=false&from=postView
 논리적 저장 순서와 물리적 저장 순서가 일치하는 자료구조로 인덱스로 데이터 바로 접근이 가능하다. 즉, 조회하는데 상수 시간이 걸린다. O(1). 하지만 삭제/삽입 후에는 뒤에 있는 모든 원소들을 앞/뒤로 옮겨야하기 때문에 O(n)의 시간이 걸린다. 배열의 연속적인 특징을 만족시켜야 하기 때문이다.
 
 ### LinkedList
@@ -25,6 +28,7 @@
 ### ArrayList
 고정된 크기의 배열과 달리, arrayList는 동적 배열이기 때문에 선언시 크기를 정해주지 않아도 된다.
 
+------------------------------------------------------------
 ## Stack and Queue
 ### Stack
 LIFO(Last In First Out) 구조로 나중에 들어온 원소가 먼저 나가는 자료구조이다. 스택은 함수 호출에 사용되는데, 호출이 끝나고 호출한 함수의 주소로 되돌아가기 위해 필요하다.
@@ -35,7 +39,7 @@ FIFO(First In First Out) 구조로 먼저 들어온 원소가 먼저 나가는 �
 ### Circular Queue
 선형 큐는 삭제된 공간을 재사용하지 못하기 때문에 공간 낭비가 발생한다. 빈 공간을 사용하기 위해 원소들을 앞으로 옮기는 방법이 있지만, 모든 데이터들을 이동시켜야 하기에 비효율적이다. 또한 한정된 메모리에서 큐를 계속 사용하면 메모리 초과가 날 수 있다. 따라서, 큐의 단점을 보완하기 위해 큐의 맨 끝과 처음이 연결된 형태의 자료구조가 원형큐이다. 원형큐는 공간을 재사용할 수 있기 때문에 고정된 크기의 메모리를 사용해야 될 경우 사용된다.
 
-
+----------------------------------------------------------------
 ## Priority Queue
 **우선순위가 높은 데이터 순으로 삭제**되는 자료구조로 배열, 연결리스트, 힙 등을 통해 구현할 수 있다. 이 중 힙(heap)이 가장 효율적이다.
 
@@ -75,9 +79,30 @@ cf. Binary Search Tree는 중복을 허용하지 않으나, Heap에서는 중복
 ### Heap Sort
 N개의 요소를 정렬할 경우 O(NlogN)이 소요된다. 정렬해야 할 N개의 요소들을 최대 힙으로 초기화한다. 그 다음, 하나씩 요소를 힙에서 꺼내 배열의 뒤부터 저장한다. 하나의 요소를 Heap에 삽입하거나 삭제할 때 Heap을 재정비하는 시간이 logN만큼 소요되고, 전체 요소 개수가 N개이므로 O(NlogN)이 걸린다. 힙 정렬은 **전체 자료를 정렬하는 것이 아니라 가장 큰(작은) 값 몇 개만 필요할 때** 유용하다.
 
----
+--------------------------------------------------------------
+## Tree
+계층적 관계를 표현한 자료구조로 루트 노드(only one), 차일드 노드, 리프노드(no child) 구성된다.
+* 용어: 노드, 단말(비단말) 노드, 차수, 레벨, 높이
+* 차수: 어떤 노드가 가지고 있는 자식 노드 개수
+* 레벨: 각 층별로 숫자를 매긴 것 0부터 시작
+* 높이: 트리의 최고 레벨
 
-## HashTable
+### Binary Tree
+모든 노드의 차수가 2이하인 트리로 노드가 없는 공집합도 이진 트리로 인정된다
+* 조건 
+  * 루트 노드를 중심으로 두 개의 서브 트리로 나뉜다.
+  * 나뉜 두 서브 트리도 모두 이진 트리어야 한다.
+* 분류
+  * 포화이진트리 : 모든 레벨이 꽉찬 이진트리
+  * 완전 이진 트리: 마지막 레벨에서는 노드가 꽉 차있진 않지만 중간엔 빈 틈이 없는 이진 트리 
+  * 기타 이진 트리 : 나머지
+* 사례
+  * 구조화된 문서 출력
+  * 폴더 용량 계산
+
+------------------------------------------------------------
+
+## Hash Table
 
 **Overview** Hash 함수를 이용하여 상수시간만에 읽기와 쓰기를 할 수 있는 자료구조로 key와 value값으로 저장된다. Hash 함수의 load balancing(hash값들이 고르게 분포되는 정도)에 따라 성능이 달라지며, 같은 값으로 해싱(키값이 해시함수에 의해 해시값으로 변환되는것)될 경우 충돌이 발생하게 된다. 충돌로 인해 탐색 시간이 길어져 table의 복잡도는 평균적으로 O(1)이지만 O(N)이 될 수 있다. 따라서 충돌을 최소화하기 위해 hash 함수는 데이터들을 고르게 분포해야 하며, 충돌 발생시 어떻게 대응 할 것인지도 생각해줘야 한다.
 
@@ -117,21 +142,11 @@ Loadfactor(전체 버킷 중 사용 중인 버킷 비율)가 특정 임계점(JA
 해싱 vs 이진 탐색 트리
 이진 탐색 트리는 현재 값보다 다음으로 큰 값(작은 값)을 쉽게 찾을 수 있으며, 정렬되어 있으므로 값의 크기순으로 순회하는 것이 쉽다. 반면 해싱은 순서가 없기 때문에 정렬이 불가, 테이블 크기를 얼마만큼 할당해야 되는지가 불명확하다. 최악의 경우 모든 값이 하나의 버켓으로 집중되는 것으로 이 경우 시간 복잡도가 O(N)이 된다.
 
-### references 
-http://d2.naver.com/helloworld/831311
-
-http://bcho.tistory.com/m/1072?category=617037
-
-http://sweeper.egloos.com/m/925740
-
-http://hsp1116.tistory.com/35 
-
-http://asfirstalways.tistory.com/332?category=688193 
-
+--------------------------------------------------------------------
 
 ## References 
-https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/DataStructure 
+* https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/DataStructure 
 
-http://cs.lmu.edu/~ray/classes/dsa/ 
+* http://cs.lmu.edu/~ray/classes/dsa/ 
 
-C언어로 쉽게 풀어쓴 자료구조
+* 한빛미디어, C언어로 쉽게 풀어쓴 자료구조
