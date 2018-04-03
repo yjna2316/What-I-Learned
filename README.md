@@ -1,6 +1,6 @@
 # What-I-Learned
 
-## Part1-1 Data Structure
+## [Part1-1 Data Structure](https://github.com/yjna2316/What-I-Learned/blob/master/DataStructure/DataStructure.md)
 
 * LinkedList
 * Stack
@@ -11,7 +11,7 @@
 * Tree
 * Graph
 
-## Part1-2 Computer Architecture(https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
+##  [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
 
 * 폰노이만 구조
 * CPU
@@ -35,7 +35,7 @@
     * 인터럽트
     * DMA(Direct Memory Access)
 
-## Part1-3 Operating System(https://github.com/yjna2316/What-I-Learned/blob/master/OperatingSystem/OperatingSystem.md) 
+## [Part1-3 Operating System](https://github.com/yjna2316/What-I-Learned/blob/master/OperatingSystem/OperatingSystem.md) 
 * Background
   * 프로그램 실행과정
   * 동기와 비동기
