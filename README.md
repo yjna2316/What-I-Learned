@@ -11,7 +11,7 @@
 * Tree
 * Graph
 
-## [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
+## Part1-2 Computer Architecture(https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
 
 * 폰노이만 구조
 * CPU
@@ -35,4 +35,34 @@
     * 인터럽트
     * DMA(Direct Memory Access)
 
+## Part1-3 Operating System(https://github.com/yjna2316/What-I-Learned/blob/master/OperatingSystem/OperatingSystem.md) 
+* Background
+  * 프로그램 실행과정
+  * 동기와 비동기
+* 프로세스 관리
+    * 프로세스 vs 스레드
+      * PCB vs TCB
+      * 문맥교환
+      * 멀티 프로세싱 vs 멀티스레딩
+    * 프로세스간 통신(IPC)
+* CPU 스케쥴링
+  * 선점스케쥴링 vs 비선점 스케쥴링
+* 프로세스 동기화
+  * 임계영역(Critical Section)
+    * 해결책
+      * 락(Lock)
+      * 세마포어
+      * 모니터 
+  * 교착상태
+* 메모리 관리
+  * Background
+    * 스와핑(Swapping)
+    * 단편화(Fragmentation)
+    * 주소 바인딩(Address Binding)
+  * 물리 메모리 할당방식
+* 가상메모리
+  * 요구 페이징(Demand Paging)
+  * 페이지 교체
+  * 스레싱(Thrashing)
+* References
 
