@@ -6,10 +6,11 @@
 * Stack and Queue
 * Sort
 * Priority Queue
-  * Heap
+  * Heap  
   * Heap Sort
 * Tree
-  * Binary Search Tree
+  * Binary Tree
+  * BST(Binary Search Tree)
   * AVL Tree
   * Red Black Tree
 * HashTable
