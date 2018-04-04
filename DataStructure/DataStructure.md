@@ -7,7 +7,7 @@
   * Heap Sort
 * [Tree](#tree)
   * Binary Tree
-  * Binary Search Tree
+  * BST(Binary Search Tree)
   * AVL Tree
   * Red Black Tree
 * [HashTable](#hash-table)
@@ -31,12 +31,12 @@ cf. Java에서 배열이 저장되는 메모리 영역은 Heap
 ### List
 배열에서 원소 삭제시 공간 낭비의 단점을 보완해서 List 내부에 빈틈이 없게 만든, 값 간의 순서가 유지되는 자료구조이다. 중간에 데이터를 추가하면 해당 인덱스의 값에 새로운 값으로 overwrite되고, 삭제하면 배열에서는 빈자리가 그대로 남아있지만 List에서는 그 빈자리를 채우기 위해 뒤 데이터를 당기거나 밀어버린다. 즉, 순서가 유지되고 Set과 달리 중복이 허용된다.
 
-List의 기능
+**List의 기능**
 * 처음, 끝, 중간에 엘리먼트를 추가/삭제하는 기능
 * 리스트에 데이터가 있는지를 체크하는 기능
 * 리스트의 모든 데이터에 접근할 수 있는 기능
 
-**LinkedList vs ArrayList**\
+**LinkedList vs ArrayList**
 * 내부적인 구현 방법이 다르다: Linked, Array
 * 언제 사용? 
   * ArrayList: 인덱스 접근이 빈번할 때 / 순차적으로 추가/삭제시
