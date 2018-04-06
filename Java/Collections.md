@@ -7,11 +7,11 @@
 
 ## Arrays.sort vs Collections.sort
 ### Array.sort()
-* **Array 대상 오름차순 정렬:** int[], object[]
+* **Array 대상 오름차순 정렬:** int[], object[],. etc
 * Collections로 정렬하고 싶다면 Array를 Arraylist로 만든 후 sort
 * 내부 구현
-    * Primitive type sort: Dual-Pivot Quicksort
-    * Object type sort: MergeSort
+    * Primitive type: Dual-Pivot Quicksort
+    * Object type: MergeSort
     * O(nlogn) 
 
 ```java
