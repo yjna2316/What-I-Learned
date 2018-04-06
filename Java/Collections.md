@@ -1,7 +1,7 @@
-# Part2-2
+# Part2-2 Collections
 * Arrays.sort vs Collections.sort
 * Comparable vs Comparator
-  * Sort an Object in user defined criteria
+  * Sort an object in user defined criteria
 
 ---------------------------------------------------------------
 
@@ -33,18 +33,23 @@ Collections.sort(list, Collections.reverseOrder());
 
 -----------------------------------------------------------------------------------
 ## Comparable vs Comparator
-  * Sort an Object in user defined criteria
-  * Arrays와 Collections 모두 해당
-  
+* Sort an Object in user defined criteria
+* Arrays와 Collections 모두 해당
 ### Comparable Interface
 * compareTo() 오버라이드 
 ```java
 int compareTo(T o)
 ```
 
-* 객체 스스로가 다른 객체와 비교하면서 정렬 -> compareTo()에서 정의한 순서가 natural ordering이 됨 -> sort() 인자가 1개
-* natural order: 정렬 기준의 default값. 인간이 보통 정렬하는 순서를 말함. 알파벳순(a->z), 오름차순 숫자 정렬(1->100)이 해당됨
-* 여러 attribute들에 대해 종속적으로 정렬하고 싶을 때 사용: 나이를 기반으로한 이름순 정렬
+* 객체 스스로가 다른 객체와 비교하면서 정렬
+    * compareTo()에서 정의한 순서가 natural ordering이 됨
+    * sort() 인자가 1개
+* natural order? 
+    * 정렬 기준이 되는 default값 
+    * 보통 인간이 정렬하는 순서: 알파벳순(a->z), 오름차순 숫자 정렬(1->100)
+* 언제사용? 
+    * attribute들에 대해 종속적으로 정렬하고 싶을 때  
+    * 나이를 기반으로한 이름순 정렬
 
  ```java
 // A class 'Student' that implements Comparable
@@ -78,7 +83,9 @@ class Main {
    int compare(Object o1, Object o2)
 ```
 
-* 여러 attribute에 대해 독립적으로 비교하고 싶을 때 사용 -> sort() 인자가 2개. 그 수만큼 class 구현
+* 여러 attribute에 대해 독립적으로 정렬하고 싶을 때 사용 
+    * sort() 인자가 2개
+    * 정렬 기준 수만큼 class 구현
 
 ```java
 class SortbyAge implements Comparator<Student>
