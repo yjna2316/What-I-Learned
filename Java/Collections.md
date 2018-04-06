@@ -7,10 +7,12 @@
 
 ## Arrays.sort vs Collections.sort
 ### Array.sort()
-* **Array를 대상으로** 오름차순 정렬: int[], object[]
-
-* Collections로 정렬하고 싶다면 Array를 Arraylist로 만든 후 sort해야 한다.
-* Arrays.sort()는 Primitive Arrays 정렬에 Dual-Pivot Quicksort를, Object Arrays 정렬에 MergeSort를 사용한다: O(nlogn) 
+* **Array 대상 오름차순 정렬:** int[], object[]
+* Collections로 정렬하고 싶다면 Array를 Arraylist로 만든 후 sort
+* 내부 구현
+    * Primitive type sort: Dual-Pivot Quicksort
+    * Object type sort: MergeSort
+    * O(nlogn) 
 
 ```java
 // Sorts arr[] in descending order
@@ -19,7 +21,7 @@ Arrays.sort(arr, Collections.reverseOrder());
 Arrays.sort(arr);
 ```
 ### Collections.sort()
-* **List를 대상으로** 오름차순 정렬: ArraysList, LinkedList,. etc
+* **List 대상 오름차순 정렬:** ArraysList, LinkedList,. etc
 
 ```java
 List list = new ArrayList(Arrays.asList(arr));
@@ -33,7 +35,7 @@ Collections.sort(list, Collections.reverseOrder());
 
 -----------------------------------------------------------------------------------
 ## Comparable vs Comparator
-* Sort an Object in user defined criteria
+* **Sort an Object in user defined criteria**
 * Arrays와 Collections 모두 해당
 ### Comparable Interface
 * compareTo() 오버라이드 
