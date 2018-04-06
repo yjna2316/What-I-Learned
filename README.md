@@ -80,9 +80,9 @@
 
 ## Part2-1 Java
 
-## Part2-2 Collections
+## [Part2-2 Collections](https://github.com/yjna2316/What-I-Learned/blob/master/Java/Collections.md)
 
-* Arrays.sort vs Collections.sort
+* Arrays.sort() vs Collections.sort()
 * Comparable vs Comparator
   * Sort an Object in user defined criteria
 
