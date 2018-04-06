@@ -74,3 +74,16 @@
   * 스레싱(Thrashing)
 * References
 
+## Part1-3 Database
+
+## Part1-4 Network
+
+## Part2-1 Java
+
+## Part2-2 Collections
+
+* Arrays.sort vs Collections.sort
+* Comparable vs Comparator
+  * Sort an Object in user defined criteria
+
+
