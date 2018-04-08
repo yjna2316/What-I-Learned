@@ -1,7 +1,19 @@
 # What-I-Learned
+-------------------------------------------------------
+## Index
+* Computer Science Knowledges(CS 지식)
+  * [Data Structure (자료구조)](#part1-1-data-structure)
+  * [Computer Architecture (컴퓨터구조)](#part1-2-computer-architecture)
+  * [Operating System (운영체제)](#part1-3-operating-system)
+  * Database (데이터베이스)
+  * Network (네트워크)
 
-## [Part1-1 Data Structure](https://github.com/yjna2316/What-I-Learned/blob/master/DataStructure/DataStructure.md)
-
+* Programming Languages(프로그래밍 언어)
+  * [Java](#part2-1-java)
+    * [Collections](#part2-2-collections)
+-------------------------------------------------------
+## CS knowledges
+### [Part1-1 Data Structure](https://github.com/yjna2316/What-I-Learned/blob/master/DataStructure/DataStructure.md)
 * Array vs ArryaList vs LinkedList
 * Stack and Queue
 * Sort
@@ -19,7 +31,7 @@
   * Resizing
 * References
 
-##  [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
+###  [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
 
 * 폰노이만 구조
 * CPU
@@ -43,7 +55,7 @@
     * 인터럽트
     * DMA(Direct Memory Access)
 
-## [Part1-3 Operating System](https://github.com/yjna2316/What-I-Learned/blob/master/OperatingSystem/OperatingSystem.md) 
+### [Part1-3 Operating System](https://github.com/yjna2316/What-I-Learned/blob/master/OperatingSystem/OperatingSystem.md) 
 * Background
   * 프로그램 실행과정
   * 동기와 비동기
@@ -74,13 +86,13 @@
   * 스레싱(Thrashing)
 * References
 
-## Part1-3 Database
+### Part1-3 Database
 
-## Part1-4 Network
-
-## Part2-1 Java
-
-## [Part2-2 Collections](https://github.com/yjna2316/What-I-Learned/blob/master/Java/Collections.md)
+### Part1-4 Network
+-----------------------------------------------------------------------
+## Programming Languages
+### Part2-1 Java
+### [Part2-2 Collections](https://github.com/yjna2316/What-I-Learned/blob/master/Java/Collections.md)
 * Sort
     * Arrays.sort vs Collections.sort
     * Comparable vs Comparator
