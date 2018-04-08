@@ -1,12 +1,32 @@
 # Part2-2 Collections
-* Arrays.sort vs Collections.sort
-* Comparable vs Comparator
-  * Sort an object in user defined criteria
-
+* [Sort](#sort)
+    * Arrays.sort vs Collections.sort
+    * Comparable vs Comparator
+* [Collection Interfaces](#collection-interfaces) 
+    * [List Interface](#list-interface)
+        * ArrayList
+        * LinkedList
+        * Vector    
+    * [Map Interface](#map-interface)
+        * HashMap vs HashTable 
+        * LinkedHashMap
+        * TreeMap      
+    * [Set Interface](set-interface)
+        * HashSet 
+        * LinkedHashSet
+        * TreeSet
+    * [Methods](#methods)
+        * List
+            * Remove
+            * Array to ArrayList   
+* [Exceptions and Errors](#exceptions-and-errors)
+    * ConcurrentModificationException
+* References
 ---------------------------------------------------------------
-
+# Sort
+------------------------------------------------------
 ## Arrays.sort vs Collections.sort
-### Array.sort()
+### Arrays.sort()
 * **Array 대상 오름차순 정렬:** int[], object[],. etc
 * Collections로 정렬하고 싶다면 Array를 Arraylist로 만든 후 sort
 * 내부 구현
@@ -36,7 +56,7 @@ Collections.sort(list, Collections.reverseOrder());
 -----------------------------------------------------------------------------------
 ## Comparable vs Comparator
 * **Sort an Object in user defined criteria**
-* Arrays와 Collections 모두 해당
+* Arrays.sort와 Collections.sort에 모두 사용 가능
 ### Comparable Interface
 * compareTo() 오버라이드 
 ```java
@@ -132,6 +152,90 @@ class Main {
 }
 
 ```
+-------------------------------------------------------
+# Collection Interfaces 
+------------------------------------------------------
+<!-- ## List Interface
+### ArrayList
+### LinkedList
+### Vector
+------------------------------------------------------ 
+## Map Interface
+### HashMap vs HashTable 
+### LinkedHashMap
+### TreeMap      
+------------------------------------------------------
+## Set Interface
+### HashSet 
+### LinkedHashSet
+### TreeSet
+-------------------------------------------------------
+-->
+## Methods
+### List
+#### Remove 
+* remove(int index): index로 제거 
+* remove(Obejct obj): 값으로 제거
 
-#### References
+> Index가 아닌 **int값**으로 제거하고 싶다면 int -> **Integer로 변환**해줘야. 그렇지 않으면 index로 인식된다.
+``` java
+// 인덱스 10번에 있는 원소값 제거
+list.remove(10); 
+// 리스트 중 가장 먼저 나오는 원소값 10 제거
+list.remove((Integer)10);
+```
+* int parameter vs long parameter
+```java
+long longNum = 2;
+int intNum = 2;
+List<Integer> list = new ArrayList<Integer>();
+list.add(1);
+list.add(2);
+list.add(3);
+list.remove(longNum);
+System.out.println(list.size()); 
+// output: 3
+list.remove(intNum);
+System.out.println(list.size()); 
+// output: 2
+```
+* int값이면 index로 인식하지만, long은 object로 인식함 / long은 int로 자동 convert되지 않기 때문 -> 직접 명시해주면 가능
+*  object로 인식하기 위해 [Autoboxing](https://github.com/yjna2316/What-I-Learned/blob/master/Java/Java.md#wrapper-class) 발생: long primitive type -> java.lang.Long object 
+* 결과: java.lang.Integer로 autobox되어 있는 list 값들과 비교(equals)했을 때, 같은 값이 없으므로 아무것도 제거되지 않게됨
+* Reference\
+https://stackoverflow.com/questions/30349653/undesired-behavior-of-arraylist-remove-in-java
+
+#### Array to ArrayList
+* Arrays.asList(list)
+```java
+ List<T> asList(T... a)
+```
+* Primitive type에 대해서는 사용 안하고 **Loop를** 이용한다: boxing 처리 안되기 때문 
+* Wrapper class나 non-primitive type일 때 사용한다.
+```java
+int[] nums = {1, 2, 3};
+List<Integer> intList = new ArrayList<Integer>();
+for (int i : nums)
+{
+    intList.add(i);
+}
+
+List<String> stooges = Arrays.asList("Larry", "Moe", "Curly"); // ok
+```
+
+-------------------------------------------------------
+## Exceptions and Errors
+------------------------------------------------------
+### ConcurrentModificationException
+* **언제발생?** List를 iterate 하면서 동시에 조작도 할 때 발생 
+    * read & remove(or add) 동시 수행시
+* 이유: List는 동기화가 보장되지 않기 때문에, 다음 원소로 이동할 때마다 현재 list 사이즈와 expected size(주로 initial size)를 비교해서 값이 다른지 확인한다.
+* 해결: copy본까지 총 2개를 만들어서 하나는 돌면서 읽고 나머지 한개에서 remove로 해결. 대신 remove한 값을 다른 곳에서 다시 검사하지 않도록 주의해야함( 데이터 불일치로 인한 문제 신경쓰기)
+
+
+
+------------------------------------------------------
+## References
+------------------------------------------------------
+* Sorting objects and primitive types\
 https://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/ 
