@@ -32,7 +32,7 @@ class sortByFrequencyUsingMap {
     StringBuilder out = new StringBuilder();
     for (int freqKey : sortByFreq.keySet()) {
       List<Integer> sortedList = sortByFreq.get(freqKey);
-      // sort and print out
+      // sort in ascending order
       Collections.sort(sortedList);
       // freq수 만큼 append
       for (int num : sortedList) {
@@ -46,7 +46,7 @@ class sortByFrequencyUsingMap {
     for (Map.Entry<Integer, List<Integer>> e : sortByFreq.entrySet()) {
       int freq = e.getKey();
       List<Integer> sortedList = e.getValue();
-      // sort and print out
+      // sort in ascending order 
       Collections.sort(sortedList);
       // freq수 만큼 append
       for (int num : sortedList) {
