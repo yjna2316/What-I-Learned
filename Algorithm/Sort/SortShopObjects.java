@@ -3,8 +3,7 @@
  */
 import java.io.*;
 import java.util.*;
-
-public class p2_test {
+public class SortShopObjects {
   static class Shop implements Comparable<Shop> {
     int shopX;
     int shopY;
