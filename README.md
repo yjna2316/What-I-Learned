@@ -29,6 +29,11 @@
   * Hash Function
   * Collision Resolution
   * Resizing
+* Graph
+  * 그래프 구현
+  * 그래프 탐색
+    * DFS(깊이우선탐색)
+    * BFS(너비우선탐색)
 * References
 
 ###  [Part1-2 Computer Architecture](https://github.com/yjna2316/What-I-Learned/blob/master/ComputerArchitecture/ComputerArchitecture.md)
@@ -69,10 +74,10 @@
   * 선점스케쥴링 vs 비선점 스케쥴링
 * 프로세스 동기화
   * 임계영역(Critical Section)
-    * 해결책
-      * 락(Lock)
-      * 세마포어
-      * 모니터 
+  * 해결책
+    * 락(Lock)
+    * 세마포어
+    * 모니터 
   * 교착상태
 * 메모리 관리
   * Background
@@ -89,10 +94,24 @@
 ### Part1-3 Database
 
 ### Part1-4 Network
+* OSI 7계층 
+* HTTP VS HTTPS
+  * GET, POST 방식 비교
+  * SSL vs TLS
+* 쿠키 vs 세션
+* TCP/IP
+  * TCP와 UDP
+  * 3 Way Handshaking
+* 동기식 통신 vs 비동기식 통신
+* 웹페이지가 표시되기까지 과정
+  * DNS 질의 과정(DNS query)
+* 대칭키 암호화와 공개키 암호화
+
 -----------------------------------------------------------------------
 ## Programming Languages
+### Part2-0 C
 ### Part2-1 Java
-### [Part2-2 Collections](https://github.com/yjna2316/What-I-Learned/blob/master/Java/Collections.md)
+### [Part2-2 Java Collections](https://github.com/yjna2316/What-I-Learned/blob/master/Java/Collections.md)
 * Sort
     * Arrays.sort vs Collections.sort
     * Comparable vs Comparator
@@ -101,18 +120,18 @@
         * ArrayList
         * LinkedList
         * Vector    
-    * Map Interface
-        * HashMap vs HashTable 
-        * LinkedHashMap
-        * TreeMap      
-    * Set Interface
+     * Set Interface
         * HashSet 
         * LinkedHashSet
-        * TreeSet
+        * TreeSet        
     * Methods
         * List
             * Remove
-            * Array to ArrayList   
+            * Array to ArrayList
+* Map Interface
+        * HashMap vs HashTable 
+        * LinkedHashMap
+        * TreeMap 
 * Exceptions and Errors
     * ConcurrentModificationException
 * References
