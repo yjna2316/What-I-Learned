@@ -87,7 +87,7 @@ OSI 모델은 **네트워크 통신 과정**을 7개의 독립적인 계층으�
   * (SSL과 조합하여) 통신 자체를 암호화: HTTPS 사용
   * HTTP 메시지 내용만 암호화
 
-### HTTPS (HTTP over Secure socket layer) ]
+### HTTPS (HTTP over Secure socket layer)
  HTTP 통신하는 **소켓 부분을 SSL(Secure Socket Layer) 또는 TLS(Transport Layer Security) 프로토콜로 대체한 것으로, HTTP에 암호화와 인증, 데이터 무결성을 보장해준다**. HTTP는 TCP와 직접 통신했지만, HTTPS에서 HTTP는 SSL과 통신하고 **SSL이 TCP와 통신**하게 된다. 
 
 * SSL / TLS 암호화 방식
@@ -347,13 +347,15 @@ CPU가 **데이터를 메모리에 저장하는 방식**(또는 데이터를 해
 
 -----------------------------------------------------------------------
 ### References
-* 인코딩 http://itstory.tk/entry/%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%B4%EB%9E%80-ASCII-URL-HTML-Base64-MS-Script-%EC%9D%B8%EC%BD%94%EB%94%A9
-* TCP vs UDP http://slic.tistory.com/1401 
-* 쿠키와 세션
+* 인코딩\
+http://itstory.tk/entry/%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%B4%EB%9E%80-ASCII-URL-HTML-Base64-MS-Script-%EC%9D%B8%EC%BD%94%EB%94%A9
+* TCP vs UDP\
+http://slic.tistory.com/1401 
+* 쿠키와 세션\
 http://jeong-pro.tistory.com/80
-* 소켓프로그래밍, 바이트순서
+* 소켓프로그래밍, 바이트순서\
 https://www.slideshare.net/ssusereb4897/ss-40765344 
-* 동기, 비동기
+* 동기, 비동기\
 http://jajubogi.tistory.com/14
 * https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Network 
 * 리브로웍스, 명쾌한 설명과 풍부한 그림으로 배우는 TCP/IP 쉽게, 더쉽게
