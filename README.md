@@ -93,7 +93,7 @@
 
 ### Part1-3 Database
 
-[### Part1-4 Network](https://github.com/yjna2316/What-I-Learned/blob/master/Network/Network.md)
+### [Part1-4 Network](https://github.com/yjna2316/What-I-Learned/blob/master/Network/Network.md)
 * OSI 7계층 
 * HTTP VS HTTPS
   * SSL / TLS
