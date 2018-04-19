@@ -93,20 +93,23 @@
 
 ### Part1-3 Database
 
-### Part1-4 Network
+[### Part1-4 Network](https://github.com/yjna2316/What-I-Learned/blob/master/Network/Network.md)
 * OSI 7계층 
 * HTTP VS HTTPS
-  * GET, POST 방식 비교
-  * SSL vs TLS
-* 쿠키 vs 세션
+  * SSL / TLS
+* GET vs Post
+* 웹캐싱
+* Cookie vs Session
 * TCP/IP
   * TCP와 UDP
   * 3 Way Handshaking
-* 동기식 통신 vs 비동기식 통신
 * 웹페이지가 표시되기까지 과정
   * DNS 질의 과정(DNS query)
+* 동기식 vs 비동기식 통신
+* 빅 엔디안 vs 리틀 엔디안
 * 대칭키 암호화와 공개키 암호화
-
+  * 전자인증서
+  * 전자서명
 -----------------------------------------------------------------------
 ## Programming Languages
 ### Part2-0 C
