@@ -5,8 +5,8 @@
   * [Data Structure (자료구조)](#part1-1-data-structure)
   * [Computer Architecture (컴퓨터구조)](#part1-2-computer-architecture)
   * [Operating System (운영체제)](#part1-3-operating-system)
-  * Database (데이터베이스)
-  * Network (네트워크)
+  * [Database (데이터베이스)](#part1-4-database)
+  * [Network (네트워크)](#part1-5-network)
 
 * Programming Languages(프로그래밍 언어)
   * [Java](#part2-1-java)
@@ -91,9 +91,15 @@
   * 스레싱(Thrashing)
 * References
 
-### Part1-3 Database
+### [Part1-4 Database](https://github.com/yjna2316/What-I-Learned/blob/master/Database/Database.md)
+* Database
+* Index
+  * Clustered Index vs Unclustered Index
+* Transaction
+* Normalization(정규화)
+* NoSQL
 
-### [Part1-4 Network](https://github.com/yjna2316/What-I-Learned/blob/master/Network/Network.md)
+### [Part1-5 Network](https://github.com/yjna2316/What-I-Learned/blob/master/Network/Network.md)
 * OSI 7계층 
 * HTTP VS HTTPS
   * SSL / TLS
