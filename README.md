@@ -138,9 +138,9 @@
             * Remove
             * Array to ArrayList
 * Map Interface
-        * HashMap vs HashTable 
-        * LinkedHashMap
-        * TreeMap 
+    * HashMap vs HashTable 
+    * LinkedHashMap
+    * TreeMap 
 * Exceptions and Errors
     * ConcurrentModificationException
 * References
